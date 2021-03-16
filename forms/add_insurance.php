@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
             $startDate = date("Y-m-d", strtotime($startDate));
             $endDate = date("Y-m-d", strtotime($endDate));
             require_once("../dbConn.php");
-            mysqli_query($connection, "INSERT INTO `documents` (`doc_type`, `vehicle_name`, `model_name`, `registaration_year`, `registration_state`, `start_date`, `end_date`, `user_id`, vehicle_number) VALUES ( '1', '$vehicleName', '$modelName', '$registrationYear', '$state', '$startDate', '$endDate', '$userId','$vehicleNumber')");
+            mysqli_query($connection, "INSERT INTO `documents` (`doc_type`, `vehicle_name`, `model_name`, `registaration_year`, `registration_state`, `start_date`, `end_date`, `user_id`, vehicle_number) VALUES ( '1', '$vehicleName', '$modelName', '$registrationYear', '$state', '$startDate', '$endDate', '$userId','$vehicleNumber')"); 
             $errorData=null;
             require_once "../utils/functions.php";
             echo manageResponse(false, "", null);
